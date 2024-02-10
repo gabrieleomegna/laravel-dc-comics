@@ -4,14 +4,16 @@
     <main>
         <div class="container">
             @forelse ( $comics as $comic )
-                <article>
-                    <div class="card-logo">
-                        <img src="{{$comic['thumb']}}" alt="">
-                    </div>
-                    <p>
-                        {{$comic['series']}}
-                    </p>
-                </article>    
+                <a href="{{route('guest.comics.show', $comic['id'])}}">
+                    <article>
+                        <div class="card-logo">
+                            <img src="{{$comic['thumb']}}" alt="">
+                        </div>
+                        <p>
+                            {{$comic['series']}}
+                        </p>
+                    </article>
+                </a>
             @empty
                 <h4>There are no comics...</h4>
             @endforelse 
