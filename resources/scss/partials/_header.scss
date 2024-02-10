@@ -1,0 +1,44 @@
+@use './mixins' as *;
+    
+header {
+    #upper-hdr{
+        background-color: rgb(2, 130, 249);
+        color: white;
+        div.container {
+            @include flex(row, flex-end, center);
+            padding: .5rem;
+            span{
+                font-size: .75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-left: 4rem;
+            }
+        }
+    }
+    section.container.nav {
+        @include flex(row, space-between, center);
+        section.logo{
+            width: 100px;
+            img {
+                width: 100%;
+            }
+        }
+
+        nav .hdr-nav-bar-list{
+            list-style-type: none;
+            @include flex(row, space-around, center);
+        
+            li {
+                text-transform: uppercase;
+                margin-left: 1rem;
+                font-weight: 600;
+                font-size: .8rem;
+            }
+        }
+    }
+    section#jumbotron {
+        height: 320px;
+        background: url('/resources/imgs/jumbotron.jpg');
+        background-size: cover;
+    }
+} 

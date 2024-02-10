@@ -1,0 +1,41 @@
+@use './mixins' as *;
+
+footer {
+    color: white;
+    section#upper-footer{
+        background: url('/resources/imgs/footer-bg.jpg');
+        .container {
+            padding: 2rem 0;
+            @include flex (row, start, stretch);
+            article.ftr-list-box{
+                margin-right: 4rem;
+                
+                &:first-of-type ul:nth-child(2){
+                    margin-top: 1rem;
+                }
+                ul.ftr-list {
+                    list-style-type: none;
+                    .list-title{
+                        margin-bottom: .7rem;
+                    }
+                    li:not(.list-title) {
+                        margin-bottom: .35rem;
+                        opacity: .5;
+                        font-size: .7rem;
+                        font-weight: 100;
+                    }
+                }
+            }
+        };
+    }
+    
+    section#bottom-footer {
+        background-color: rgb(48, 48, 48);
+        .container {
+            @include flex(row, space-between, center);
+            .social {
+                @include flex(row,center, center);
+            }
+        }
+    }
+}
