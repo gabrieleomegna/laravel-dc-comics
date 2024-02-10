@@ -6,6 +6,9 @@ main {
         display: flex;
         flex-wrap: wrap;
         padding: 2rem 0;
+        h4 {
+            color: white;
+        }
         article {
             width: calc((100% / 6) - 2rem);
             margin-right: 1rem;

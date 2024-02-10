@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
 class ComicController extends Controller
 {
@@ -11,8 +12,8 @@ class ComicController extends Controller
      * Display a listing of the resource.
      */
     public function index() {
-        $comics = config('db.comics');
-        return view('guest.comics.index', ['comics' => $comics]);
+        $comics = Comic::all();
+        return view('guest.comics.index', compact('comics'));
     }
 
     /**
