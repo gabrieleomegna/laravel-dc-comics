@@ -1,6 +1,6 @@
 <footer>
     <section id="upper-footer">
-        <div class="container">
+        <div class="my-container">
             <article class="ftr-list-box">
                 <ul class="ftr-list">
                     <li class="list-title"><h3>Dc Comix</h3></li>
@@ -47,7 +47,7 @@
         </div>
     </section>
     <section id="bottom-footer">
-        <div class="container">
+        <div class="my-container">
            <button>Sign-up now!</button>
            <div class="social">
                 <span>Follow Us</span>

@@ -2,7 +2,7 @@
 
 @section('main-content')
     <main>
-        <div class="container">
+        <div class="my-container">
             @forelse ( $comics as $comic )
                 <a href="{{route('guest.comics.show', $comic['id'])}}">
                     <article>

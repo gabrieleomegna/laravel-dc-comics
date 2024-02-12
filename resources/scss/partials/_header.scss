@@ -4,7 +4,7 @@ header {
     #upper-hdr{
         background-color: rgb(2, 130, 249);
         color: white;
-        div.container {
+        div.my-container {
             @include flex(row, flex-end, center);
             padding: .5rem;
             span{
@@ -15,7 +15,7 @@ header {
             }
         }
     }
-    section.container.nav {
+    section.my-container.nav {
         @include flex(row, space-between, center);
         section.logo{
             width: 100px;

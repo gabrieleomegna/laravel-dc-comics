@@ -2,7 +2,7 @@
 
 @section('main-content')
     <main>
-        <div class="container">
+        <div class="my-container">
                 <article>
                     <div class="card-logo">
                         <img src="{{$comic['thumb']}}" alt="">

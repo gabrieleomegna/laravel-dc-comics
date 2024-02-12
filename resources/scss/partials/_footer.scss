@@ -4,7 +4,7 @@ footer {
     color: white;
     section#upper-footer{
         background: url('/resources/imgs/footer-bg.jpg');
-        .container {
+        .my-container {
             padding: 2rem 0;
             @include flex (row, start, stretch);
             article.ftr-list-box{
@@ -31,7 +31,7 @@ footer {
     
     section#bottom-footer {
         background-color: rgb(48, 48, 48);
-        .container {
+        .my-container {
             @include flex(row, space-between, center);
             .social {
                 @include flex(row,center, center);

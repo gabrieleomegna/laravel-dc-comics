@@ -1,11 +1,11 @@
 <header>
     <section id="upper-hdr">
-        <div class="container">
+        <div class="my-container">
             <span>Dc Power Visa</span>
             <span>Additional Dc Sites</span>
         </div>
     </section>
-    <section class="container nav">
+    <section class="my-container nav">
         <section class="logo">
             <img src="{{Vite::asset('resources/imgs/dc-logo.png')}}" alt="">
         </section>
