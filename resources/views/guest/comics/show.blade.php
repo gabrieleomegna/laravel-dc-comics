@@ -2,16 +2,24 @@
 
 @section('main-content')
     <main>
-        <div class="my-container">
-                <article>
-                    <div class="card-logo">
-                        <img src="{{$comic['thumb']}}" alt="">
+        <section class="products" id="comics">
+            <div class="container">
+                <div class="row">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3 mb-3">
+                        <div class="col">
+                            <div class="card my-bg-color text-white">
+                                <img src="{{ $comic->thumb }}" alt="{{ $comic->title }} picture">
+                                <div class="card-body">
+                                    <p class="text-uppercase">
+                                        {{ $comic->title }}
+                                    </p>
+                                </div>
+                            </div>
+                        
+                        </div>
                     </div>
-                    <p>
-                        {{$comic['series']}}
-                    </p>
-                </article>
-        </div>
-
+                </div>
+            </div>
+        </section>
     </main>
 @endsection

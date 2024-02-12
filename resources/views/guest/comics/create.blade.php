@@ -8,7 +8,7 @@
                     <h1 class="title mb-4 pt-3">
                         Crea nuovo fumetto:
                     </h1>
-                    <form action="" method="POST">
+                    <form action="{{route('guest.comics.store')}}" method="POST">
                         @csrf
     
                         <div class="mb-3">
@@ -24,8 +24,8 @@
                         </div>
     
                         <div class="mb-3">
-                            <label for="sale_date"class="form-label">Data di uscita:</label>
-                            <input type="text" name="sale_date" id="sale_date" class="form-control">
+                            <label for="series"class="form-label">Serie del fumetto:</label>
+                            <input type="text" name="series" id="series" class="form-control">
                         </div>
     
                         <div class="mb-3">
@@ -41,6 +41,12 @@
                         <div class="mb-3">
                             <label for="description"class="form-label">Descrizione:</label>
                             <textarea type="text" name="description" id="description" class="form-control"
+                            rows="4">
+                            </textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price"class="form-label">Prezzo:</label>
+                            <textarea type="text" name="price" id="price" class="form-control"
                             rows="4">
                             </textarea>
                         </div>
