@@ -38,8 +38,6 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $formData = $request->all();
-        // ? ['titolo'] => 'Spaghetto alla chitarra'
-        // ? ['cottura'] => '10 minuti'
 
         $newComic = new Comic();
         $newComic->title = $formData['title'];
