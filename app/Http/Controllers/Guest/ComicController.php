@@ -19,8 +19,7 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id){
-        $comic = Comic::findOrFail($id);
+    public function show(Comic $comic){
         return view('guest.comics.show', compact('comic'));
     }
 
@@ -57,31 +56,31 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
         return view('guest.comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
         $data = $request->all();
-        $comic= Comic::findOrFail($id);
-        // dd($data);
-        $newComic= new Comic();
-        $newComic->title = $data['title'];
-        $newComic->type = $data['type'];
-        $newComic->series = $data['series'];
-        $newComic->sale_date = $data['sale_date'];
-        $newComic->thumb = $data['thumb'];
-        $newComic->description = $data['description'];
-        $newComic->price = $data['price'];
-        $newComic->artists = '';
-        $newComic->writers = '';
-        $newComic->update();
+        // $comic= Comic::findOrFail($id);
+         // dd($data);
+        // $newComic= new Comic();
+        // $newComic->title = $data['title'];
+        // $newComic->type = $data['type'];
+        // $newComic->series = $data['series'];
+        // $newComic->sale_date = $data['sale_date'];
+        // $newComic->thumb = $data['thumb'];
+        // $newComic->description = $data['description'];
+        // $newComic->price = $data['price'];
+        // $newComic->artists = '';
+        // $newComic->writers = '';
+        // $newComic->update();
+        $comic->update($data);
 
         return redirect()->route('guest.comics.show', $comic->id);
     }
